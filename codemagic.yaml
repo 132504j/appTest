@@ -1,5 +1,8 @@
 workflows:
-  sample-workflow:
-    name: Codemagic Sample Workflow
-    max_build_duration: 120
-    instance_type: mac_mini_m1
+  my-workflow:
+    instance_type: mac_pro
+    publishing:
+      email:
+        recipients:
+          - 2298613382@qq.com
+       
