@@ -26,7 +26,7 @@ jobs:
           cd ios
           cd App
           pod install
-          xcodebuild -workspace support_app_2.xcworkspace -scheme support_app_2 -configuration Debug -sdk iphonesimulator -quiet
+          xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug -sdk iphonesimulator -quiet
       - name: Archive Artifacts
         uses: actions/upload-artifact@v2
         with:
@@ -52,6 +52,6 @@ jobs:
         uses: wow-actions/xcode@v1.0.0
         with:
           command: xcbuild
-          args: -workspace support_app_2.xcworkspace -scheme support_app_2 -sdk iphoneos -configuration Debug build
-          archivePath: build/support_app_2.xcarchive
-          exportPath: build/support_app_2.ipa
+          args: -workspace App.xcworkspace -scheme App -sdk iphoneos -configuration Debug build
+          archivePath: build/App.xcarchive
+          exportPath: build/App.ipa
