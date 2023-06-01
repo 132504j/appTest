@@ -24,6 +24,7 @@ jobs:
       - name: Build iOS App
         run: |
           cd ios
+          cd App
           pod install
           xcodebuild -workspace support_app_2.xcworkspace -scheme support_app_2 -configuration Debug -sdk iphonesimulator -quiet
       - name: Archive Artifacts
