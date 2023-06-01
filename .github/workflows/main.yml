@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: 11.0.18+10
-          distribution: 'zulu'
+          distribution: 'temurin'
       - name: setup android
         uses: android-actions/setup-android@v2
       - uses: actions/checkout@main
