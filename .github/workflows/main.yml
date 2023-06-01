@@ -7,10 +7,12 @@ jobs:
   build-android:
     runs-on: ubuntu-latest
     steps:
-    - name: chekcout
-      uses: actions/checkout@main
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v3
       with:
-        java-version: 8
+        java-version: 1.8
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v2
     - name: build
       run: |
         npm install -g @ionic/cli
