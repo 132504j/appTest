@@ -1,0 +1,20 @@
+name: ionic build
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+    steps:
+    - name: chekcout
+      uses: actions/checkout@main
+      with:
+        java-version: 8
+    - name: build
+      run: |
+        npm install -g @ionic/cli
+        npm install
+        ionic capacitor build android
+      
+      
