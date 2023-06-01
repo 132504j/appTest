@@ -21,8 +21,7 @@ jobs:
       - uses: actions/checkout@main
       - uses: gradle/gradle-build-action@v2
         with:
-          gradle-version: current
-          arguments: assembleRelease
+          gradle-version:  8.0.2
       - name: build
         run: |
           npm install -g @ionic/cli
