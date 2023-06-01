@@ -18,6 +18,7 @@ jobs:
           distribution: 'zulu'
       - name: setup android
         uses: android-actions/setup-android@v2
+      - uses: actions/checkout@main
       - name: build
         run: |
           npm install -g @ionic/cli
