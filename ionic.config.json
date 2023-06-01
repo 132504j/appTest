@@ -1,0 +1,7 @@
+{
+  "name": "support_app_2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
