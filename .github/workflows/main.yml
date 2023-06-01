@@ -19,6 +19,10 @@ jobs:
       - name: setup android
         uses: android-actions/setup-android@v2
       - uses: actions/checkout@main
+      - uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: current
+          arguments: assembleRelease
       - name: build
         run: |
           npm install -g @ionic/cli
