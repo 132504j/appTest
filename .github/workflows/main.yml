@@ -7,21 +7,30 @@ jobs:
   build-android:
     runs-on: ubuntu-latest
     steps:
+    
+      - uses: actions/checkout@main
+  
       - name: setup nodejs
         uses: actions/setup-node@v3
         with:
           node-version: 'latest'
+          
       - name: setup java
         uses: actions/setup-java@v3
         with:
           java-version: 11.0.18+10
           distribution: 'temurin'
+          
       - name: setup android
         uses: android-actions/setup-android@v2
-      - uses: actions/checkout@main
+        
+      - name: Build SampleApplication
+        run: ./gradlew --no-daemon build
+      
       - uses: gradle/gradle-build-action@v2
         with:
           gradle-version:  8.0.2
+          
       - name: build
         run: |
           npm install -g @ionic/cli
