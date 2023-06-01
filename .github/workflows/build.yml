@@ -26,6 +26,7 @@ jobs:
           cd ios
           cd App
           pod install
+          cd ..
           xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug -sdk iphonesimulator -quiet
       - name: Archive Artifacts
         uses: actions/upload-artifact@v2
